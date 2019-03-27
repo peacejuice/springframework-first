@@ -29,4 +29,4 @@ spring:
       log-abandoned: true
       connection-properties: socketTimeout=3000;connectTimeout=1000
 mybatis:
-  mapperLocations: /mapper/*.xml
+  mapperLocations: classpath*:mapper/*.xml

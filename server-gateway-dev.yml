@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: 20190213home-kitchen
+        uri: lb://sunshine-home
+        predicates:
+        - Path=/peace/**
+        filters:
+        - StripPrefix=1
+#      - id: sunshine-home
+#        uri: http://127.0.0.1:12102
+#        predicates:
+#        - Path=/peace/**
+#        filters:
+#        - StripPrefix=1
+  rabbitmq:
+    port: 5672
+    username: guest
+    password: guest
+    host: localhost

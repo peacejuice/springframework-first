@@ -5,3 +5,28 @@ spring:
     username: guest
     password: guest
     host: localhost
+  datasource:
+    druid:
+      username: root
+      password: 666666
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/cpms_file?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+      type: com.alibaba.druid.pool.DruidDataSource
+      initial-size: 5
+      max-active: 20
+      min-idle: 5
+      max-wait: 5000
+      phy-timeout-millis: 7200000
+      remove-abandoned: true
+      remove-abandoned-timeout: 180
+      test-while-idle: true
+      test-on-return: false
+      test-on-borrow: false
+      validation-query: SELECT 1
+      validation-query-timeout: 1
+      time-between-eviction-runs-millis: 15000
+      default-auto-commit: true
+      log-abandoned: true
+      connection-properties: socketTimeout=3000;connectTimeout=1000
+mybatis:
+  mapperLocations: classpath:mapper/*.xml

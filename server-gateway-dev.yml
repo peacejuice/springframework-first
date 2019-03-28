@@ -8,6 +8,7 @@ spring:
         - Path=/peace/**
         filters:
         - StripPrefix=1
+        - webFluxSecurityFilterChain
 #      - id: sunshine-home
 #        uri: http://127.0.0.1:12102
 #        predicates:

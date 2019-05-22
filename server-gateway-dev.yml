@@ -8,12 +8,14 @@ spring:
         - Path=/peace/**
         filters:
         - StripPrefix=1
+        - SecurityFilter
       - id: 20190401sunshine-kitchen
         uri: lb://sunshine-kitchen
         predicates:
         - Path=/peace/**
         filters:
         - StripPrefix=1
+        - SecurityFilter
 #      - id: sunshine-home
 #        uri: http://127.0.0.1:12102
 #        predicates:
